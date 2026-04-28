@@ -8,6 +8,8 @@
           content="width=device-width, initial-scale=1.0">
     <title>Gandhi</title>
     <link rel="stylesheet" href="Styles.css">
+    <!-- Script per il visualizzatore 3D -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   </head>
 
   <body>
@@ -29,30 +31,30 @@
       <section id="home">        
         <article class="service-item">          
           <h4>Mahatma Gandhi e la pace</h4>
-          <p> Karamchand Gandhi (1869–1948), conosciuto come Mahatma (“grande anima”), è una delle figure 
+          <p> Karamchand Gandhi (1869–1948), conosciuto come Mahatma ("grande anima"), è una delle figure 
             più importanti del XX secolo per il suo contributo alla filosofia della pace e 
-            della nonviolenza. Leader del movimento per l’indipendenza dell’India dal dominio 
+            della nonviolenza. Leader del movimento per l'indipendenza dell'India dal dominio 
             britannico, Gandhi ha dimostrato che il cambiamento politico e sociale può 
             avvenire senza ricorrere alla violenza.</p>
 
           <h4>Il concetto di nonviolenza (Ahimsa)</h4> 
-          <p> Al centro del pensiero di Gandhi c’è il principio dell’ahimsa, termine sanscrito che significa “non nuocere”. 
-            Per Gandhi la nonviolenza non era solo l’assenza di violenza fisica, ma un atteggiamento profondo di rispetto verso ogni 
+          <p> Al centro del pensiero di Gandhi c'è il principio dell'ahimsa, termine sanscrito che significa "non nuocere". 
+            Per Gandhi la nonviolenza non era solo l'assenza di violenza fisica, ma un atteggiamento profondo di rispetto verso ogni 
             essere vivente. Essa richiedeva autocontrollo, compassione e la capacità di trasformare il conflitto senza distruggere 
-            l’avversario.</p>
+            l'avversario.</p>
 
           <h4>La Satyagraha: la forza della verità</h4>
-          <p> Un altro pilastro del pensiero gandhiano è la satyagraha, che significa “insistenza sulla verità”. 
+          <p> Un altro pilastro del pensiero gandhiano è la satyagraha, che significa "insistenza sulla verità". 
             Questa strategia prevedeva la resistenza pacifica contro le ingiustizie, attraverso scioperi, boicottaggi, 
             marce e disobbedienza civile. Secondo Gandhi, la verità e la giustizia possiedono una forza morale superiore a 
             qualsiasi arma.</p>
-          <h4>Gandhi e la pace come azione</h4> <p>Per Gandhi la pace non era una condizione passiva, ma un’azione concreta. 
-            Celebre è la sua idea che “non esiste una via per la pace, la pace è la via”. Questo significa che i mezzi utilizzati 
+          <h4>Gandhi e la pace come azione</h4> <p>Per Gandhi la pace non era una condizione passiva, ma un'azione concreta. 
+            Celebre è la sua idea che "non esiste una via per la pace, la pace è la via". Questo significa che i mezzi utilizzati 
             per raggiungere un obiettivo devono essere coerenti con il fine stesso: non si può costruire una società pacifica 
             attraverso la violenza.</p>
-            <h4>L’impatto del pensiero gandhiano nel mondo</h4>
+            <h4>L'impatto del pensiero gandhiano nel mondo</h4>
             <p>Il messaggio di Gandhi ha influenzato numerosi leader e movimenti nel mondo, tra cui Martin Luther King Jr. nella lotta per
-              i diritti civili negli Stati Uniti e Nelson Mandela nella battaglia contro l’apartheid in Sudafrica. La sua eredità dimostra 
+              i diritti civili negli Stati Uniti e Nelson Mandela nella battaglia contro l'apartheid in Sudafrica. La sua eredità dimostra 
               che la pace può essere uno strumento potente di cambiamento globale.</p>
           
           <img src="Gandhi_1.jpg"
@@ -69,6 +71,28 @@
           </div>
           <img src="gandhi.png"
                alt="placeholder">
+        </article>
+
+        <!-- Modello 3D interattivo dell'arcolaio -->
+        <article class="news-item">
+          <h4 style="padding-left: 15px;">MODELLO 3D INTERATTIVO</h4>
+          <div class="model-container" style="background-color: #f9f9f9; border-radius: 10px; overflow: hidden;">
+            <model-viewer 
+                src="../arcolaio.glb" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                tone-mapping="neutral" 
+                poster="../poster.webp" 
+                shadow-intensity="1"
+                auto-rotate
+                style="width: 100%; height: 500px; outline: none;">
+                
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+          </div>
         </article>
       </section>
 
@@ -123,3 +147,4 @@
   </body>
 
 </html>
+
