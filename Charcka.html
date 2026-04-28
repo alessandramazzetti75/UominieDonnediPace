@@ -9,6 +9,8 @@
     <title>Charka</title>
     <link rel="stylesheet"
           href="Styles_Gandhi.css">
+    <!-- Script per il visualizzatore 3D -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   </head>
 
   <body>
@@ -35,33 +37,46 @@
           <img src="./India1931flag.png"
                alt="Immagine di Gandhi">
         </article>
-                <article class="news-item">
+        <article class="news-item">
           <h4 style="padding-left: 15px;">I COMPONENTI DEL CHARKA</h4>
           <p>Il Charka è composto da pochi elementi essenziali:
             <ul>
-              <li>La ruota, che genera il movimento rotatorio;
-</li>
-              <li>La manovella, che serve per far girare la ruota;
-</li>
-              <li>Una cinghia o una cordicella, che collega ruota e fuso trasmettendo il movimento;
-</li>
-              <li>Il fuso, che attorciglia la fibra trasformandola in filo;
-</li>
-              <li>Il supporto del fuso, che mantiene il fuso stabile e allineato;
-</li>
-              <li>Il filo-guida, che dirige il filo e mantiene la tensione;
-</li>
-              <li>Bobina / rocchetto, che raccoglie il filo già filato;
-</li>
-              <li>Base / telaio, che è struttura portante del filatoio;
-</li>
-              <li>Scatola pieghevole, ovvero un contenitore compatto per trasporto e uso portatile.
-              </li>
+              <li>La ruota, che genera il movimento rotatorio;</li>
+              <li>La manovella, che serve per far girare la ruota;</li>
+              <li>Una cinghia o una cordicella, che collega ruota e fuso trasmettendo il movimento;</li>
+              <li>Il fuso, che attorciglia la fibra trasformandola in filo;</li>
+              <li>Il supporto del fuso, che mantiene il fuso stabile e allineato;</li>
+              <li>Il filo-guida, che dirige il filo e mantiene la tensione;</li>
+              <li>Bobina / rocchetto, che raccoglie il filo già filato;</li>
+              <li>Base / telaio, che è struttura portante del filatoio;</li>
+              <li>Scatola pieghevole, ovvero un contenitore compatto per trasporto e uso portatile.</li>
             </ul>
             <p style="padding-left: 0px;">Nell'immagine vediamo un Charka</p>
           </p>
           <img src="./02.jpg"
                alt="Immagine di un Charka">
+        </article>
+
+        <!-- Modello 3D interattivo del Charka -->
+        <article class="news-item">
+          <h4 style="padding-left: 15px;">MODELLO 3D INTERATTIVO</h4>
+          <div class="model-container" style="background-color: #f9f9f9; border-radius: 10px; overflow: hidden;">
+            <model-viewer 
+                src="../arcolaio.glb" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                tone-mapping="neutral" 
+                poster="../poster.webp" 
+                shadow-intensity="1"
+                auto-rotate
+                style="width: 100%; height: 500px; outline: none;">
+                
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+          </div>
         </article>
 
       </section>
@@ -76,3 +91,4 @@
     </footer>
 
   </body>
+</html>
