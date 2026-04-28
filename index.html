@@ -9,6 +9,8 @@
     <title>Progetto PACE 2BT-i</title>
     <link rel="stylesheet"
           href="Styles.css">
+    <!-- Script per il visualizzatore 3D -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   </head>
 
   <body>
@@ -17,13 +19,14 @@
       <h1 style="padding-left: 20px; padding-right: 20px;">Progetto Pace: Uomini e Donne di Pace</h1>
       <nav class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="einstein.html">Einstein</a></li>
-          <li><a href="MadreTeresa.html">MadreTeresa</a></li>
-          <li><a href="gandhi_Elnagar.html">Gandhi</a></li>
-          <li><a href="turing.html" >Turing</a></li>
-          <li><a href="bertrand_russel.html" >Russel</a></li>
-          <li><a href="Lennon.html" >Lennon</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="Einstein/einstein.html">Einstein</a></li>
+          <li><a href="Madre_Teresa/MadreTeresa.html" target="_blank">MadreTeresa</a></li>
+          <li><a href="Gandhi/gandhi_Elnagar.html">Gandhi</a></li>
+          <li><a href="Turing/turing.html" target="_blank">Turing</a></li>
+          <li><a href="Russel/bertrand_russel.html" target="_blank">Russel</a></li>
+          <li><a href="Lennon/Lennon.html" target="_blank">Lennon</a></li>
+          
         </ul>
       </nav>
     </header>
@@ -35,6 +38,28 @@
           <img src="./Immagine Pace.webp"
                alt="placeholder">
         </article>
+
+        <!-- Il modello 3D -->
+        <article class="news-item">
+          <h4 style="padding-left: 15px;">MODELLO 3D INTERATTIVO</h4>
+          <div class="model-container" style="background-color: #f9f9f9; border-radius: 10px; overflow: hidden;">
+            <model-viewer 
+                src="arcolaio.glb" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                tone-mapping="neutral" 
+                poster="poster.webp" 
+                shadow-intensity="1"
+                auto-rotate
+                style="width: 100%; height: 500px; outline: none;">
+                
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+          </div>
+        </article>
       </section>
 
      
@@ -42,7 +67,7 @@
       <h2>I gruppi di lavoro</h2> 
         <div class="cards">
           <article class="card">
-            <a href="./einstein.html">
+            <a href="./Einstein/einstein.html">
             <img src="./Einstein image.jpg"
                  alt="placeholder">
             </a>
@@ -51,18 +76,18 @@
           </article>
 
           <article class="card">
-            <a href="./gandhi_Elnagar.html">
+            <a href="./Gandhi/gandhi_Elnagar.html">
               <img src="./Gandhi image.jpg" alt="placeholder">
             </a>
             <h3>Gandhi</h3>
             <p style="color: maroon;">Arpini, Ottolini, Conchetti, 
-              Canevari, Singh ed Elnagar,	Piana, Aderdour,
+              Calabresi, Singh e Elnagar,	Piana, Aderdour,
                Zucchinali, Gomaa ed Elzayat </p>
             
           </article>
           
           <article class="card">
-            <a href="./MadreTeresa.html" ><img src="./MadreTeresa image.jpg"
+            <a href="./Madre_Teresa/MadreTeresa.html"><img src="./MadreTeresa image.jpg"
                  alt="placeholder"></a>
             
             <h3>Madre Teresa</h3>
@@ -70,14 +95,14 @@
           </article>
 
           <article class="card">
-           <a href="./turing.html"><img src="./Touring image.jpg"
+           <a href="./Turing/turing.html"><img src="./Touring image.jpg"
                  alt="placeholder"></a> 
             <h3>Touring</h3>
             <p style="color: maroon;">Ferri Jacopo, Zolio Cristian e Grassi Alessandro</p>
           </article>
 
           <article class="card">
-            <a href="./Lennon.html"><img src="./Lennon image.jpg"
+            <a href="./Lennon/Lennon.html"><img src="./Lennon image.jpg"
                  alt="placeholder"></a>
             
             <h3>Lennon</h3>
@@ -85,7 +110,7 @@
           </article>
 
           <article class="card">
-            <a href="./bertrand_russel.html"><img src="./Russell_image.jpg"
+            <a href="./Russel/bertrand_russel.html"><img src="./Russell_image.jpg"
                  alt="placeholder"></a>
             <h3>Russel</h3>
             <p style="color: maroon;">Pontoglio Alessandro,	Cortesi Elia e	Ali Fizaan
@@ -117,5 +142,8 @@
 
 
   </body>
+
+</html>
+
 
 </html>
